@@ -597,6 +597,7 @@ fi
 %dir %attr(0755, nova, root) %{_localstatedir}/log/nova
 %dir %attr(0755, nova, root) %{_localstatedir}/run/nova
 
+%{_bindir}/nova-cells
 %{_bindir}/nova-clear-rabbit-queues
 # TODO. zmq-receiver may need its own service?
 %{_bindir}/nova-rpc-zmq-receiver
@@ -677,6 +678,9 @@ fi
 %endif
 
 %changelog
+* Sun Nov 6 2012 Dan Prince <dprince@redhat.com> - 2012.2-0.6.upstream
+- Add nova-cells to bin.
+
 * Sun Oct 28 2012 Dan Prince <dprince@redhat.com> - 2012.2-0.6.upstream
 - Remove nova volume files.
 
